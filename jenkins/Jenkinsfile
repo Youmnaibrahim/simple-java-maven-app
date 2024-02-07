@@ -24,10 +24,10 @@ pipeline {
     }
     post {
         success {
-            slackSend(channel: '#jenkins-ci', message: "Build Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'project1-raw6296', tokenCredentialId: 'slack-notify')
+            slackSend(channel: '#jenkins-cli', message: "Build Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'project1-raw6296', tokenCredentialId: 'slack-notify')
         }
         failure {
-            slackSend(channel: '#jenkins-ci', message: "Build Failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'project1-raw6296', tokenCredentialId: 'slack-notify')
+            slackSend(channel: '#jenkins-cli', message: "Build Failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'project1-raw6296', tokenCredentialId: 'slack-notify')
         }
     }
 }
